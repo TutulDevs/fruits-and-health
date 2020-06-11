@@ -96,6 +96,61 @@ header .logo h1 {
 }
 
 
+/*                      header
+***************************************/
+.menu-wrap {
+    padding: 10px;
+    position: relative;
+}
+label {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+#toggle {
+    display: none;
+    transition: .4s ease;
+}
+#menu {
+    visibility: hidden;
+    transform: scaleY(0);
+    transition: .5s;
+}
+#toggle:checked + #menu {
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+#menu {
+    border: 1px solid var(--salmon);
+    position: absolute;
+    right: 4px;
+    top: 68px;
+    background: var(--white);
+    width: 150px;
+    border-radius: 8px;
+}
+#menu::before {
+    content: '';
+    display: block;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid var(--salmon);
+    position: absolute;
+    top: -15px;
+    right: 5px;
+}
+#menu a {
+    display: block;
+    color: var(--salmon);
+    text-align: center;
+    padding: 10px;
+    transition: 0.4s ease;
+}
+#menu a:hover {
+    color: var(--pink-dark);
+}
+
+
 /*                      main
 ***************************************/
 main {
